@@ -2,72 +2,71 @@ from .data_model import Neural_Network
 import numpy as np
 
 def transform_data(inputModel):
-    age = inputModel.Age
-    if (inputModel.Gender == "Male"):
+    age = inputModel.age
+    if (inputModel.gender == "Male"):
         gender = 0
     else:
         gender = 1
 
-    if (inputModel.Ethnicity == "Caucasian"):
+    if (inputModel.ethnicity == "Caucasian"):
         ethnicity = 0
-    elif (inputModel.Ethnicity == "African American"):
+    elif (inputModel.ethnicity == "African American"):
         ethnicity = 1
-    elif (inputModel.Ethnicity == "Asian"):
+    elif (inputModel.ethnicity == "Asian"):
         ethnicity = 2
     else:
         ethnicity = 3
 
-    if (inputModel.Parental_Education == "None"):
+    if (inputModel.parental_education == "None"):
         parental_education = 0
-    elif (inputModel.Parental_Education == "High School"):
+    elif (inputModel.parental_education == "High School"):
         parental_education = 1
-    elif (inputModel.Parental_Education == "Some College"):
+    elif (inputModel.parental_education == "Some College"):
         parental_education = 2
-    elif (inputModel.Parental_Education == "Bachelor's"):
+    elif (inputModel.parental_education == "Bachelor's"):
         parental_education = 3
     else:
         parental_education = 4
 
-    weekly_study_hours = inputModel.Weekly_Study_Hours
+    weekly_study_hours = inputModel.weekly_study_hours
 
-    absences = inputModel.Absences
+    absences = inputModel.absences
 
-    if (inputModel.Tutoring == True):
+    if (inputModel.tutoring == True):
         tutoring = 1
     else:
         tutoring = 0
     
-    if (inputModel.Parental_Support == "None"):
+    if (inputModel.parental_support == "None"):
         parental_support = 0
-    elif (inputModel.Parental_Support == "Low"):
+    elif (inputModel.parental_support == "Low"):
         parental_support = 1
-    elif (inputModel.Parental_Support == "Moderate"):
+    elif (inputModel.parental_support == "Moderate"):
         parental_support = 2
-    elif (inputModel.Parental_Support == "High"):
+    elif (inputModel.parental_support == "High"):
         parental_support = 3
     else:
         parental_support = 4
 
-    if (inputModel.Extracurricular_Activities == True):
+    if (inputModel.extracurricular_activities == True):
         extracurricular_activities = 1
     else:
         extracurricular_activities = 0
 
-    if (inputModel.Sports == True):
+    if (inputModel.sports == True):
         sports = 1
     else:
         sports = 0
 
-    if (inputModel.Music == True):
+    if (inputModel.music == True):
         music = 1
     else:
         music = 0
 
-    if (inputModel.Volunteering == True):
+    if (inputModel.volunteering == True):
         volunteering = 1
     else:
         volunteering = 0
-
     return [age, gender, ethnicity, parental_education, weekly_study_hours, absences, tutoring, parental_support, extracurricular_activities, sports, music, volunteering]
 
 def predict_gpa(inputModel):
