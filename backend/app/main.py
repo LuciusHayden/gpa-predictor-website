@@ -18,7 +18,7 @@ input_args.add_argument("parental_education", type=str, help="Parental Education
 input_args.add_argument("weekly_study_hours", type=int, help="Weekly Study Hours", required=True)
 input_args.add_argument("absences", type=int, help="Absences", required=True)
 input_args.add_argument("tutoring", type=bool, help="Tutoring", required=True)
-input_args.add_argument("parental_support", type=int, help="Parental Support", required=True)
+input_args.add_argument("parental_support", type=str, help="Parental Support", required=True)
 input_args.add_argument("extracurricular_activities", type=bool, help="Extracurricular Activities", required=True)
 input_args.add_argument("sports", type=bool, help="Sports", required=True)
 input_args.add_argument("music", type=bool, help="Music", required=True)
@@ -35,7 +35,7 @@ inputFields = {
     'weekly_study_hours': fields.Integer,
     'absences': fields.Integer,
     'tutoring': fields.Boolean,
-    'parental_support': fields.Integer,
+    'parental_support': fields.String,
     'extracurricular_activities': fields.Boolean,
     'sports': fields.Boolean,
     'music': fields.Boolean,
