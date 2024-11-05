@@ -1,39 +1,43 @@
-<div class="container mt-5">
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Age</label>
-      <input type="number" id="question" class="form-control" [(ngModel)]="inputModel.age" placeholder="Enter age" />
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label class="col-md-6" for="question" class="form-label">Gender</label>
-      <div>
-        <select name="gender" [(ngModel)]="inputModel.gender">
+<div class="container mt-5 p-4" style="max-width: 800px; background-color: #f8f9fa; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+  <h2 class="text-center mb-4" style="color: #007bff;">Student Profile Form</h2>
+
+  <!-- Demographic Information Section -->
+  <div class="section mb-4">
+    <h5 class="mb-3" style="color: #343a40;">Demographic Information</h5>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" id="age" class="form-control" [(ngModel)]="inputModel.age" placeholder="Enter age" />
+      </div>
+      <div class="col-md-6">
+        <label for="gender" class="form-label">Gender</label>
+        <select id="gender" class="form-select" [(ngModel)]="inputModel.gender">
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
       </div>
     </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label class="col-md-6" for="question" class="form-label">Ethnicity</label>
-      <div>
-        <select name="ethnicity" [(ngModel)]="inputModel.ethnicity">
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label for="ethnicity" class="form-label">Ethnicity</label>
+        <select id="ethnicity" class="form-select" [(ngModel)]="inputModel.ethnicity">
           <option value="Caucasian">Caucasian</option>
           <option value="African American">African American</option>
           <option value="Asian">Asian</option>
-          <option value="">Other</option>
+          <option value="Other">Other</option>
         </select>
       </div>
     </div>
   </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label class="col-md-6" for="question" class="form-label">Parental Education</label>
-      <div>
-        <select name="parental_education" [(ngModel)]="inputModel.parental_education">
+
+  <!-- Academic Information Section -->
+  <div class="section mb-4">
+    <h5 class="mb-3" style="color: #343a40;">Academic Information</h5>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="parentalEducation" class="form-label">Parental Education</label>
+        <select id="parentalEducation" class="form-select" [(ngModel)]="inputModel.parental_education">
           <option value="None">None</option>
           <option value="High School">High School</option>
           <option value="Some College">Some College</option>
@@ -41,33 +45,34 @@
           <option value="Higher">Higher</option>
         </select>
       </div>
+      <div class="col-md-6">
+        <label for="weeklyStudyHours" class="form-label">Weekly Study Hours</label>
+        <input type="number" id="weeklyStudyHours" class="form-control" [(ngModel)]="inputModel.weekly_study_hours" placeholder="Enter hours" />
+      </div>
     </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Weekly Study Hours</label>
-      <input type="number" id="question" class="form-control" [(ngModel)]="inputModel.weekly_study_hours" placeholder="Enter hours" />
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Absences</label>
-      <input type="number" id="question" class="form-control" [(ngModel)]="inputModel.absences" placeholder="Enter absences" />
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Tutoring</label>
-      <div>
-        <input type="checkbox"  id="question" [(ngModel)]="inputModel.tutoring" />
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="absences" class="form-label">Absences</label>
+        <input type="number" id="absences" class="form-control" [(ngModel)]="inputModel.absences" placeholder="Enter absences" />
+      </div>
+      <div class="col-md-6">
+        <label for="tutoring" class="form-label">Tutoring</label>
+        <div class="form-check">
+          <input type="checkbox" id="tutoring" class="form-check-input" [(ngModel)]="inputModel.tutoring" />
+          <label for="tutoring" class="form-check-label">Enrolled in Tutoring</label>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label class="col-md-6" for="question" class="form-label">Parental Support</label>
-      <div>
-        <select name="parental_education" [(ngModel)]="inputModel.parental_support">
+
+  <!-- Activity Information Section -->
+  <div class="section mb-4">
+    <h5 class="mb-3" style="color: #343a40;">Extracurricular Activities</h5>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="parentalSupport" class="form-label">Parental Support</label>
+        <select id="parentalSupport" class="form-select" [(ngModel)]="inputModel.parental_support">
           <option value="None">None</option>
           <option value="Low">Low</option>
           <option value="Moderate">Moderate</option>
@@ -75,49 +80,53 @@
           <option value="Very High">Very High</option>
         </select>
       </div>
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Extracurricular Activities</label>
-      <div>
-        <input type="checkbox"  id="question" [(ngModel)]="inputModel.extracurricular_activities" />
+      <div class="col-md-6">
+        <label for="extracurricularActivities" class="form-label">Extracurricular Activities</label>
+        <div class="form-check">
+          <input type="checkbox" id="extracurricularActivities" class="form-check-input" [(ngModel)]="inputModel.extracurricular_activities" />
+          <label for="extracurricularActivities" class="form-check-label">Participates in Extracurricular Activities</label>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Sports</label>
-      <div>
-        <input type="checkbox"  id="question" [(ngModel)]="inputModel.sports" />
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label for="sports" class="form-label">Sports</label>
+        <div class="form-check">
+          <input type="checkbox" id="sports" class="form-check-input" [(ngModel)]="inputModel.sports" />
+          <label for="sports" class="form-check-label">Involved in Sports</label>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Music</label>
-      <div>
-        <input type="checkbox"  id="question" [(ngModel)]="inputModel.music" />
+      <div class="col-md-4">
+        <label for="music" class="form-label">Music</label>
+        <div class="form-check">
+          <input type="checkbox" id="music" class="form-check-input" [(ngModel)]="inputModel.music" />
+          <label for="music" class="form-check-label">Plays a Musical Instrument</label>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row mb-3 justify-content-center">
-    <div class="col-md-6">
-      <label for="question" class="form-label">Volunteering</label>
-      <div>
-        <input type="checkbox"  id="question" [(ngModel)]="inputModel.volunteering" />
-      </div>
-    </div>
-  </div>
-  <div  class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card bg-light mb-3">
-        <div class="card-body">
-          <p class="card-text" >{{ responseModel.GPA }}</p>
+      <div class="col-md-4">
+        <label for="volunteering" class="form-label">Volunteering</label>
+        <div class="form-check">
+          <input type="checkbox" id="volunteering" class="form-check-input" [(ngModel)]="inputModel.volunteering" />
+          <label for="volunteering" class="form-check-label">Participates in Volunteering</label>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- GPA Result Card -->
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card text-center bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Predicted GPA</h5>
+          <p class="card-text" style="font-size: 1.25rem; color: #28a745;">{{ responseModel.GPA }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
   <div class="row justify-content-center mt-4">
     <div class="col-md-6 text-center">
       <button class="btn btn-primary btn-lg" (click)="predict()">Submit</button>
